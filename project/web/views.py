@@ -1,4 +1,4 @@
-from .forms import ContactForm
+from .forms import LoginForm
 
 
 def contact(request):
