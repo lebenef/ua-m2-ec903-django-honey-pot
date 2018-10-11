@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .forms import LoginForm
-
+from .forms import ContactForm
 
 def index(request):
     return HttpResponse("En construction")
@@ -29,7 +29,16 @@ def login(request):
 
 
 def contact(request):
-
+     
+    
+    form = ContactForm(request.POST or None)
+    
+    if form.is_valid(): 
+        sujet = form.cleaned_data['sujet']
+        message = form.cleaned_data['message']
+        envoyeur = form.cleaned_data['envoyeur']
+        
+        envoi = True
     return render(request, 'web/contact.html', locals())
 
 def condutil(request):
