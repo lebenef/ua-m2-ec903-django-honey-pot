@@ -1,10 +1,15 @@
+from django.http import HttpResponse
+from django.shortcuts import render
 from .forms import LoginForm
 
 
-def contact(request):
+def index(request):
+    return HttpResponse("En construction")
+
+def login(request):
 
 
-    form = ContactForm(request.POST or None)
+    form = LoginForm(request.POST or None)
 
 
     if form.is_valid(): 
@@ -12,13 +17,12 @@ def contact(request):
 
         username = form.cleaned_data['username']
 
-        passworr = form.cleaned_data['password']
+        password = form.cleaned_data['password']
 
 
         envoi = True
 
     
 
-    # Quoiqu'il arrive, on affiche la page du formulaire.
 
-    return render(request, 'view.html', locals())
+    return render(request, 'web/login.html', locals())
