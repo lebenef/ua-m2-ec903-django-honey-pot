@@ -26,3 +26,21 @@ def login(request):
 
 
     return render(request, 'web/login.html', locals())
+
+
+def contact(request):
+
+    return render(request, 'web/contact.html', locals())
+
+def condutil(request):
+
+    return render(request, 'web/condutil.html', locals())
+
+
+def donneeperso(request):
+
+    return render(request, 'web/donneeperso.html', locals())
+
+def menleg(request):
+
+    return render(request, 'web/menleg.html', locals())
