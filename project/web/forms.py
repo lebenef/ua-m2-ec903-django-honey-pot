@@ -1,14 +1,23 @@
+from django.forms import ModelForm
 from django import forms
+from .models import User
+from .models import Contact
+
+class InscriptionForm(forms.ModelForm):
+    class Meta:
+
+        model = User
+        
+        widgets = {
+        'password': forms.PasswordInput(),
+        }
+
+        fields = '__all__'
 
 
-class LoginForm(forms.Form):
+class ContactForm(forms.ModelForm):
+    class Meta:
 
-    username = forms.CharField(max_length=100)
+        model = Contact
 
-    password = forms.CharField(max_length=100, widget=forms.PasswordInput)
-
-
-class ContactForm(forms.Form):
-    sujet = forms.CharField(max_length=100)
-    message = forms.CharField(widget=forms.Textarea)
-    envoyeur = forms.EmailField(label="Votre adresse e-mail")
+        fields = '__all__'
