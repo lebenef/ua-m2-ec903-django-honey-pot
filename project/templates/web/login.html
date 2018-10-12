@@ -1,15 +1,6 @@
 <h1>Bienvenue !!!</h1>
 
-<form action="{% url "login" %}" method="post">
-
-    {% csrf_token %}
-
-    {{ form.as_p }}
-
-    <input type="submit" value="Submit" />
-
-</form>
-
+<a href="/web/inscription/">Inscription</a>
 <a href="/web/contact/">Contact</a>
 <a href="/web/condutil/">Condition d'utilisation</a>
 <a href="/web/donneeperso/">Données Personnelles</a>
