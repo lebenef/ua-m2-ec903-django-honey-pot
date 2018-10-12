@@ -1,11 +1,11 @@
 from django.db import models
 from django import forms
+from django.utils import timezone
 # Create your models here.
 
 class User(models.Model):
     username = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
-    mail = models.CharField(max_length=100)
 
     def __str__(self):
       
@@ -29,7 +29,7 @@ class Contact(models.Model):
 class Data(models.Model):
     addressip = models.CharField(max_length=100)
     useragent = models.CharField(max_length=100)
-    datetime = models.DateField()
+    datetime = models.DateTimeField()
 
     def __str__(self):
 
