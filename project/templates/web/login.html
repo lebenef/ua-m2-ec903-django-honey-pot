@@ -22,5 +22,5 @@
 {% endblock content %}
 
 {% block ga %}
-  {% include "ga.html" %}
+  {% include "ga.html" with ga_tracking_id=ga_tracking_id%}
 {% endblock ga %}
