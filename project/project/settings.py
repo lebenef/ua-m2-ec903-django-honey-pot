@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'web.context_processors.ga_tracking_id',
+                'web.context_processors.use_ga',
             ],
         },
     },
@@ -122,3 +123,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 GA_TRACKING_ID = 'UA-127418908-1'
+
+USE_GA = os.environ.get('DJANGO_USE_GA', False)
+USE_GA = {'True': True, 'False': False}.get(USE_GA, False)

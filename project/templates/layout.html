@@ -9,6 +9,9 @@
   {% endblock content %}
 
   {% block ga %}
+    {% if use_ga %}
+        {% include "ga.html" with ga_tracking_id=ga_tracking_id %}
+    {% endif %}
   {% endblock ga %}
 </body>
 </html>
