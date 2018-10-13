@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+2r#w-ta44l6ih)2k!-0bc)s((xg_29h5-e61a1z4uh7+wx8ih'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['http://lebenefdev.alwaysdata.net/django/project']
+ALLOWED_HOSTS = []
 
 
 # Application definition
