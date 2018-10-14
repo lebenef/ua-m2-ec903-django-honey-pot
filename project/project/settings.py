@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'h8qyznqc)pp+c7guivd__3om4sl!0olnx9*-tc*k)00xmqhs9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['http://lebenefdev.alwaysdata.net/']
+ALLOWED_HOSTS = ['http://lebenefdev.alwaysdata.net']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
