@@ -18,7 +18,7 @@ def index(request):
     form2 = DataForm(request.POST or None, initial={'addressip':ip,'useragent':useragent,'datetime':date})
     if form2.is_valid():
         form2.save()
-
+        envoi = True
     return render(request, 'web/index.html', locals())
 
 
@@ -35,6 +35,7 @@ def login(request):
     form2 = DataForm(request.POST or None, initial={'addressip':ip,'useragent':useragent,'datetime':date})
     if form2.is_valid():
         form2.save()
+        envoi = True
 
     return render(request, 'web/login.html', locals())
 
@@ -53,6 +54,7 @@ def contact(request):
     form2 = DataForm(request.POST or None,initial={'addressip':ip,'useragent':useragent,'datetime':date})
     if form2.is_valid():
         form2.save()
+        envoi = True
 
     return render(request, 'web/contact.html', locals())
 

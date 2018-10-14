@@ -3,6 +3,13 @@
 {% block content %}
 
 <h1>Contact</h1>
+ {% if envoi  %}
+<div class="alert alert-success" role="alert">
+  Votre message à bien été envoyé !
+</div>
+{%endif%}
+
+
 <form action="{% url "contact" %}" method="post">
 
     {% csrf_token %}
