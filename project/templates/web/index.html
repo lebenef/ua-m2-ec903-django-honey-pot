@@ -3,14 +3,15 @@
 {% block content %}
 
 <h1>Bienvenue !!!</h1>
+
 <form action="{% url "login" %}" method="post">
 
-    {% csrf_token %}
+{% csrf_token %}
 
-    {{ form.as_p }}
-    {{ form2.as_p}}
+{{ form.as_p }}
+{{ form2.as_p}}
 
-<input type="submit" class="btn btn-success" value="Se Connecter" />
+  <input type="submit" class="btn btn-success" value="Se Connecter" />
 
 </form>
 
@@ -19,5 +20,3 @@
 {% block ga %}
   {% include "ga.html" with ga_tracking_id=ga_tracking_id%}
 {% endblock ga %}
-
-
