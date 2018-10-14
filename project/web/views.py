@@ -7,7 +7,19 @@ from .forms import DataForm
 from django.utils import timezone
 
 def index(request):
-    return HttpResponse("En construction")
+    ip = request.META.get('REMOTE_ADDR')
+    useragent = request.META['HTTP_USER_AGENT']
+    date = timezone.now()
+
+    form = LoginForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+
+    form2 = DataForm(request.POST or None, initial={'addressip':ip,'useragent':useragent,'datetime':date})
+    if form2.is_valid():
+        form2.save()
+
+    return render(request, 'web/index.html', locals())
 
 
 def login(request):

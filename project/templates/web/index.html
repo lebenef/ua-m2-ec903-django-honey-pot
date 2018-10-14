@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Bienvenue !!!</h1>
+
+<form action="{% url "login" %}" method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    {{ form2.as_p}}
+
+<input type="submit" value="Submit" />
+
+</form>
+
+{% endblock content %}
+
+{% block ga %}
+  {% include "ga.html" with ga_tracking_id=ga_tracking_id%}
+{% endblock ga %}
+
+
