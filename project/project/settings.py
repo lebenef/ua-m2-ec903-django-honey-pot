@@ -124,6 +124,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 GA_TRACKING_ID = 'UA-127418908-1'
-
+DJANGO_USE_GA = True
 USE_GA = os.environ.get('DJANGO_USE_GA', False)
 USE_GA = {'True': True, 'False': False}.get(USE_GA, False)

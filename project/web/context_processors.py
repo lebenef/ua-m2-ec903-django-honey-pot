@@ -6,3 +6,5 @@ def ga_tracking_id(request):
 
 def use_ga(request):
     return {'use_ga': settings.USE_GA}
+
+
