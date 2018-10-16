@@ -25,12 +25,8 @@ SECRET_KEY = 'h8qyznqc)pp+c7guivd__3om4sl!0olnx9*-tc*k)00xmqhs9n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = []
-=======
 ALLOWED_HOSTS = ['http://lebenefdev.alwaysdata.net']
 ALLOWED_HOSTS = ['*']
->>>>>>> dev
 
 
 # Application definition
