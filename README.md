@@ -76,6 +76,7 @@ python manage.py migrate
 ```
 python manage.py createsuperuser
 ```
+- Ajouter les clés dans le fichier settings ``www\ua-m2-ec903-django-honey-pot/project/project/settings.py`` SECRET_KEY pour la clé django que l'on peut créer avec https://www.miniwebtool.com/django-secret-key-generator/ et GA_TRACKING_ID pour la clé google analytic
 
 ### Lancement
 
