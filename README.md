@@ -16,7 +16,7 @@ https://www.alwaysdata.com/fr/
 
 - Dans Configuration -> Type Choisir Python WSGI
 - Dans Configuration -> Chemin  mettez le chemin suivant
-`` /www/ua-m2-ec903-django-honey-pot/project/project/wsgi.py*
+`` /www/ua-m2-ec903-django-honey-pot/project/project/wsgi.py
 ``
 - Dans Configuration -> Répertoir de travail mettez le chemin suivant ``/www/ua-m2-ec903-django-honey-pot/project/``
 
@@ -78,4 +78,4 @@ python manage.py createsuperuser
 
 - Rendez-vous sur le lien du site.
 
-- Vous pouvez voir les données saisies en base en allant sur : ``http://nom-du-compte.alwaysdata.net/admin`` et utiliser les iditifiant que vous avez saisies 
+- Vous pouvez voir les données saisies en base en allant sur : ``http://nom-du-compte.alwaysdata.net/admin`` et utiliser les iditifiant que vous avez saisies
