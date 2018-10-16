@@ -12,6 +12,10 @@ WORKDIR /code/
 
 RUN git clone https://github.com/lebenef/ua-m2-ec903-django-honey-pot.git
 
+WORKDIR /code/ua-m2-ec903-django-honey-pot/project/
+
+RUN python manage.py migrate
+
 EXPOSE 8000
 
 ENV DJANGO_SETTINGS_MODULE=project.settings.deploy

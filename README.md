@@ -67,6 +67,11 @@ git clone https://github.com/lebenef/ua-m2-ec903-django-honey-pot.git
 cd www/ua-m2-ec903-django-honey-pot/project/
 ```
 
+- Effectuer la migration de l'application
+```
+python manage.py migrate
+```
+
 - Créer le super utilisateur de la base de données
 ```
 python manage.py createsuperuser
