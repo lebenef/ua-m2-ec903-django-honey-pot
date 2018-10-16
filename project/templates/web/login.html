@@ -1,23 +1,26 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Bienvenue !!!</h1>
+
+<h1>Connexion</h1>
+
+{% if envoi  %}
+<div class="alert alert-danger" role="alert">
+  Utilisateur inconnu ou/et mot de passe incorrect!
+</div>
+{%endif%}
 
 <form action="{% url "login" %}" method="post">
 
-    {% csrf_token %}
+{% csrf_token %}
 
-    {{ form.as_p }}
-    {{ form2.as_p}}
+{{ form.as_p }}
+{{ form2.as_p}}
 
-<input type="submit" value="Submit" />
+  <input type="submit" class="btn btn-success" value="Connexion" />
 
 </form>
 
-<a href="/web/contact/">Contact</a>
-<a href="/web/condutil/">Condition d'utilisation</a>
-<a href="/web/donneeperso/">Données Personnelles</a>
-<a href="/web/menleg/">Mentions Légales</a>
 
 {% endblock content %}
 

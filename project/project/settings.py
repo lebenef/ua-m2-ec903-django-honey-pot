@@ -20,12 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+2r#w-ta44l6ih)2k!-0bc)s((xg_29h5-e61a1z4uh7+wx8ih'
+SECRET_KEY = 'h8qyznqc)pp+c7guivd__3om4sl!0olnx9*-tc*k)00xmqhs9n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = []
+=======
+ALLOWED_HOSTS = ['http://lebenefdev.alwaysdata.net']
+ALLOWED_HOSTS = ['*']
+>>>>>>> dev
 
 
 # Application definition
@@ -120,9 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 GA_TRACKING_ID = 'UA-127418908-1'
-
+DJANGO_USE_GA = True
 USE_GA = os.environ.get('DJANGO_USE_GA', False)
 USE_GA = {'True': True, 'False': False}.get(USE_GA, False)

@@ -28,7 +28,7 @@ class Contact(models.Model):
 
 class Data(models.Model):
     addressip = models.CharField(max_length=100)
-    useragent = models.CharField(max_length=100)
+    useragent = models.CharField(max_length=255)
     datetime = models.DateTimeField()
 
     def __str__(self):

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>Accueil</h1>
+
+<form action="{% url "login" %}" method="post">
+
+{% csrf_token %}
+
+{{ form.as_p }}
+{{ form2.as_p}}
+
+  <input type="submit" class="btn btn-success" value="Connexion" />
+
+</form>
+
+{% endblock content %}
+
+{% block ga %}
+  {% include "ga.html" with ga_tracking_id=ga_tracking_id%}
+{% endblock ga %}
